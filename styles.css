@@ -355,6 +355,7 @@ h2{
     .Cardproyect {
       flex-direction: column; 
       justify-content:center;
+      align-items: center;
     }
   
     .card1,
