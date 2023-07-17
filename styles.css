@@ -340,7 +340,8 @@ h2{
     .section-educacion{
             display: flex;
             flex-direction: column;
-            justify-content: space-between; 
+            justify-content: space-between;
+    
             
         }
     .certi{
@@ -353,6 +354,7 @@ h2{
 
     .Cardproyect {
       flex-direction: column; 
+      justify-content:center;
     }
   
     .card1,
