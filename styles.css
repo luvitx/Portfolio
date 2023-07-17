@@ -11,20 +11,76 @@ body{
     font-family: 'Roboto', sans-serif;
     font-family: 'Ysabeau Infant', sans-serif;
     overflow-x: hidden;
-    color: white;      
+       
 
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;  
+    height: 50px;
+    padding: 10px;
+   
+  }
+  
+  /* Estilo para el botón de hamburguesa */
+  .menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para el menú */
+  .menu {
+    display: none; /* Ocultar el menú por defecto */
+    list-style: none;
+    
+    
+  }
+  .menu li a{
+    color:darkblue ;
+    font-weight: bold;
+    text-decoration: none;
+    
+  }
+  .menu li {
+    margin: 0 10px;
+    
+  }
+  
+  /* Estilos para mostrar el menú */
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 20%;
+    z-index: 1;
+    border-radius:20px;
+    
+  }
 
 p{
     padding: 20px;
-    font-size: 28px;
+    font-size: 30px;
+    color:white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     
 }
+h2{color:white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
+h3{color:white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);}
+
+
 .wrapper{  
   left: 0;
   bottom: 0;
   width:100%;
-  height: 100%;
   background: linear-gradient(135deg, #ff00ff, #00ffff, #00ff00, #ffff00, #ff0000);
   background-size: 500% 500%;
   animation: gradient 15s ease infinite;
@@ -38,30 +94,6 @@ p{
     color:blue;
      
  }
-.navbar{    
-    display:flex;
-    justify-content:space-between;
-    background-color: white; /* Color de fondo */
-    height:50px; /* Altura de la barra de navegación */
-    padding: 10px; /* Espacio interno */   
-   
-    }
-.menu{
-    display: flex; 
-    width: 100%;   
-    justify-content: space-around;
-}
-
-.menu a{
-    color: darkblue;
-    text-decoration: none;
-    font: bold;
-    font-size: 20px;
-
-}
-.menu li{
-    list-style: none;
-}
 
 .personal{
     display:flex;
@@ -87,15 +119,14 @@ p{
     
 }
 .section-educacion{
-    border: hidden ;
-    
+    border: hidden ;    
     width: 100%;    
     font-size: 24px;
     padding: 5px;
     font:bold;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  
+    justify-content: space-between; 
     
 }
 .educ{
@@ -107,33 +138,47 @@ p{
 }
 .certi{
     display: flex;
-    flex-direction: column;  
+    flex-direction: row;  
      width:100%;
     text-align:center;
     padding: 5px;}
     
-
-.card1 {
+.Cardproyect{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 20px;
+   
+   
+}
+.card1 {
+    
+    padding: 20px;  
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);    
+   
 
 
 }
 .card2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 20px;
-
+    padding: 20px;  
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    
 }
 .card3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px;
-
+    padding: 20px;  
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+     
+   
+}
+.card4{
+    padding: 20px;  
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+   
+    
+   
 }
 
 img[alt="aws"] {
@@ -210,3 +255,141 @@ h2{
    color: white;
    font:bold;
 }
+.footerlink{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;    
+     
+}
+.linke{
+    width: 30px;
+
+}
+.git{
+    width: 30px;
+}
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .wrapper{  
+        left: 0;
+        bottom: 0;
+        width:100%;
+        background: linear-gradient(135deg, #ff00ff, #00ffff, #00ff00, #ffff00, #ff0000);
+        background-size: 500% 500%;
+        animation: gradient 15s ease infinite;
+      }
+      @keyframes gradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+    
+    
+    .navbar {
+            display: flex;
+            justify-content: space-between;  
+            height: 50px;
+            padding: 10px;
+           
+          }
+    .menu-icon {
+      display: block; 
+    }
+  
+    .menu {
+      position: relative; 
+    }
+    .menu.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 40%;
+        z-index: 1;
+      }
+  
+    
+    body {
+      font-size: 16px; /
+    }  
+   
+    .personal {      
+     
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+      
+      
+    }
+    .mifoto{
+        width: 50%;
+        height: 50%;
+        border-radius: 30px;
+    }
+    .about{    
+        border: hidden ;
+        padding: 20px;
+        width: 100%;
+        text-align: justify;
+        font-size: 24px;
+        font:bold;}
+
+
+    .section-educacion{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            
+        }
+    .certi{
+            display: flex;
+            flex-direction:column;  
+             width:100%;
+            text-align:center;
+           }
+
+
+    .Cardproyect {
+      flex-direction: column; 
+    }
+  
+    .card1,
+    .card2,
+    .card3,
+    .card4 {
+      width: 100%;
+      margin-bottom: 20px; 
+    }
+  
+    .card-text {
+      font-size: 16px; 
+    }
+  }
+  .section-educacion{
+    
+    flex-direction: column;
+    justify-content: space-between; 
+  }
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  } 
+ 
+  #toggle:checked + .menu {
+    display: flex;
+  }
+  .menu li {
+    margin: 10px 0; /* Agregar espacio vertical entre los elementos del menú */
+  }
+  .menu {
+    flex-direction: column; /* Cambiar la disposición a una columna */
+    align-items: center; /* Centrar los elementos verticalmente */
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 50px; /* Ajustar la posición vertical del menú desplegable */
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Asegurar que el menú se muestre por encima del contenido */
+  }

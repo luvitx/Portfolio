@@ -16,22 +16,24 @@
  
     <div class="wrapper">
             <header>          
-                <nav class="navbar">          
-                    <ul class="menu">
-                      <li><a href="index.html"onclick="irAIndex()">Sobre Mi </a></li>
-                      <li><a href="https://drive.google.com/file/d/1JbA09TrYwDqW4CPBMfZAsyisb1JoW6sj/view?usp=drive_link"download>Descargar Cv </a></li>
-                      <li><a href="Educacion.html"onclick="irAEducacion()">Educación</a></li>
-                      <li><a href="Proyectos.html"onclick="irAOtrasExperiencias()">Proyectos</a></li>
-                      
-                    </ul>
-                </nav>
+              <nav class="navbar">          
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+                
+                <ul class="menu" id="menu">
+                    <li><a href="index.html"onclick="irAIndex()">Sobre Mi </a></li>
+                    <li><a href="https://drive.google.com/file/d/1JbA09TrYwDqW4CPBMfZAsyisb1JoW6sj/view?usp=drive_link"download>Descargar Cv </a></li>
+                    <li><a href="Educacion.html"onclick="irAEducacion()">Educación</a></li>
+                    <li><a href="Proyectos.html"onclick="irAOtrasExperiencias()">Proyectos</a></li>
+                    
+                  </ul>
+              </nav>
                 <div class="brand">
                     <p>L<span>S</span></p>
                 </div>       
             </header> 
             <div class="Cardproyect">
 
-                  <div class="card" style="width: 20rem;">
+                  <div class="card1" style="width: 20rem;">
                     <img src="./img/home.JPG" class="card-img-top" alt="guay">
                     <div class="card-body">
                       <h5 class="card-title">Fundacion Guay</h5>
@@ -39,7 +41,7 @@
                       <a href="https://view.genial.ly/64922cc4de46820019d64f48/presentation-ppt-proyecto-guayequipo-9" class="btn btn-primary">Ver proyecto</a>
                     </div>
                   </div>  
-                  <div class="card" style="width: 20rem;">
+                  <div class="card2" style="width: 20rem;">
                     <img src="./img/Captura3.JPG" class="card-img-top" alt="La Scaloneta">
                     <div class="card-body">
                       <h5 class="card-title">Scaloneta</h5>
@@ -48,7 +50,7 @@
                       <a href="https://soft-bublanina-89de1e.netlify.app" class="btn btn-primary">Ver proyecto</a>
                     </div>
                   </div>
-                  <div class="card" style="width: 20rem;">
+                  <div class="card3" style="width: 20rem;">
                     <img src="./img/Captura2.JPG" class="card-img-top" alt="formulario">
                     <div class="card-body">
                       <h5 class="card-title">Formulario de Donación</h5>
@@ -56,7 +58,7 @@
                       <a href="https://dynamic-palmier-07c962.netlify.app" class="btn btn-primary">Ver proyecto</a>
                     </div>
                   </div>
-                  <div class="card" style="width: 20rem;">
+                  <div class="card4" style="width: 20rem;">
                     <img src="./img/Captura1.JPG" class="card-img-top" alt="found">
                     <div class="card-body">
                       <h5 class="card-title">No found</h5>
@@ -66,9 +68,31 @@
                   </div>             
               
             </div>             
-          <footer class="link">Luvitx Salas </footer>          
+            <footer>
+              <div class="footerlink">
+                <a href="https://www.linkedin.com/in/luvitx-salas/" target="_blank">
+                  <img class="linke" src="./img/linkedin.png" alt="linkedin">
+                </a>
+                <a href="https://github.com/luvitx" target="_blank">
+                  <img class="git" src="./img/git.png" alt="github">
+                </a>             
+              </div>  
+            </footer>           
     </div> 
-    
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('show'); // Alternar clase 'show' para mostrar/ocultar el menú
+      }
+  
+      // Evento para ocultar el menú cuando el ancho de la pantalla cambia
+      window.addEventListener('resize', function() {
+        var menu = document.getElementById('menu');
+        if (window.innerWidth > 768) {
+          menu.classList.remove('show'); // Ocultar el menú si el ancho de la pantalla es mayor a 768px
+        }
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>      

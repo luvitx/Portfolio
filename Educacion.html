@@ -13,15 +13,17 @@
 <body>
     <div class="wrapper">
             <header>          
-                <nav class="navbar">          
-                    <ul class="menu">
-                      <li><a href="index.html"onclick="irAIndex()">Sobre Mi </a></li>
+              <nav class="navbar">          
+                <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+                
+                <ul class="menu" id="menu">
+                    <li><a href="index.html"onclick="irAIndex()">Sobre Mi </a></li>
                     <li><a href="https://drive.google.com/file/d/1JbA09TrYwDqW4CPBMfZAsyisb1JoW6sj/view?usp=drive_link"download>Descargar Cv </a></li>
                     <li><a href="Educacion.html"onclick="irAEducacion()">Educación</a></li>
                     <li><a href="Proyectos.html"onclick="irAOtrasExperiencias()">Proyectos</a></li>
-                   
-                    </ul>
-                </nav>
+                    
+                  </ul>
+              </nav>
                 <div class="brand">
                     <p>L<span>S</span></p>
                 </div>       
@@ -72,7 +74,30 @@
                       </div>              
                 </div>
             </div>
-            <footer class="link">Luvitx Salas </footer>
-    </div>       
+            <footer>
+              <div class="footerlink">
+                <a href="https://www.linkedin.com/in/luvitx-salas/" target="_blank">
+                  <img class="linke" src="./img/linkedin.png" alt="linkedin">
+                </a>
+                <a href="https://github.com/luvitx" target="_blank">
+                  <img class="git" src="./img/git.png" alt="github">
+                </a>             
+              </div>  
+            </footer>   
+    </div> 
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById('menu');
+        menu.classList.toggle('show'); // Alternar clase 'show' para mostrar/ocultar el menú
+      }
+  
+      // Evento para ocultar el menú cuando el ancho de la pantalla cambia
+      window.addEventListener('resize', function() {
+        var menu = document.getElementById('menu');
+        if (window.innerWidth > 768) {
+          menu.classList.remove('show'); // Ocultar el menú si el ancho de la pantalla es mayor a 768px
+        }
+      });
+    </script>      
 </body>
 </html>
