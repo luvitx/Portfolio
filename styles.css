@@ -371,7 +371,7 @@ h2{
     }
   }
   .section-educacion{
-    
+    display:flex;
     flex-direction: column;
     justify-content: space-between; 
   }
